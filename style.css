@@ -1,0 +1,345 @@
+@import url('https://fonts.googleapis.com/css2?family=Inconsolata:wght@200;300;400;500;600;700;800;900&family=Inter:wght@100;200;300;400;500;600;700;800;900&family=Kanit:ital,wght@1,100&family=Russo+One&display=swap');
+
+body {
+    height: calc(100vh - 60px);
+    margin: 0;
+    background: #b0eaff;
+}
+
+.title {
+    margin: 30px 0 30px 50px;
+}
+
+.text-title {
+    margin: 0;
+    display: inline-block;
+}
+
+.text-title:nth-child(1) {
+    color: #0a3871;
+}
+
+.text-title:nth-child(2) {
+    color: #0089ff;
+}
+
+.text-title:nth-child(3) {
+    color: #0a3871;
+}
+
+.contenedor {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+
+/* Textarea */
+.area-entrada {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.custom-textarea {
+    width: 50%;
+    position: relative;
+    margin-bottom: 1rem;
+    margin-top: 1rem;
+}
+
+.custom-textarea textarea {
+    font-size: 1.2rem;
+    width: 100%;
+    height: 490px;
+    padding: .8rem .75rem;
+    line-height: 1.5;
+    color: #0089ff;
+    background: #ffffff;
+    background-clip: padding-box;
+    border: 3px solid #0089ff;
+    border-radius: 10px;
+    transition: border-color .15s ease-in-out, box-shadow .15s ease-in-out;
+}
+
+.custom-textarea textarea:focus {
+    border-color: #0089ff;
+    outline: 0;
+    box-shadow: 0 0 0 .25rem rgba(13, 110, 253, .25);
+}
+
+.custom-textarea label {
+    position: absolute;
+    top: .25rem;
+    left: .75rem;
+    padding: .5rem .5rem;
+    color: #0089ff;
+    background-color: #fff;
+    border-radius: 10px;
+    transform-origin: 0 0;
+    transform: translate(0, 0) scale(1);
+    transition: all .4s ease-in-out;
+    pointer-events: none;
+}
+
+.custom-textarea textarea:not(:placeholder-shown)+label,
+.custom-textarea textarea:focus+label {
+    transform: translate(-.5rem, -.9rem) scale(.85);
+    padding: .4rem .4rem;
+    font-size: .85em;
+    color: #0089ff;
+    border: 4px solid #0089ff;
+}
+
+/* Informacion */
+.info {
+    text-align: center;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    font-size: 1.5rem;
+    color: #0a3871;
+}
+
+/* Botones */
+.botones {
+    text-align: center;
+    margin-top: 10px;
+}
+
+button {
+    margin-top: 10px;
+    padding: 16px 42px;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-right: 10px;
+    color: #0089ff;
+    background: #ffffff;
+    border: 2px solid #0089ff;
+}
+
+button:hover {
+    background-color: #0089ff;
+    color: #ffffff;
+}
+
+/* Salida */
+.area-mensaje {
+    width: 40%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    margin-bottom: 1rem;
+    margin-top: 1rem;
+}
+
+.area-textarea {
+    width: 80%;
+}
+
+.area-mensaje textarea {
+    font-size: 1.2rem;
+    width: 100%;
+    height: 250px;
+    padding: .375rem .75rem;
+    line-height: 1.5;
+    color: #0089ff;
+    background: #ffffff;
+    background-clip: padding-box;
+    border: 3px solid #0089ff;
+    border-radius: 10px;
+    transition: border-color .15s ease-in-out, box-shadow .15s ease-in-out;
+}
+
+.area-mensaje textarea:focus {
+    outline: none;
+}
+
+/* CAMBIO */
+.cambio {
+    width: 10%;
+    text-align: center;
+}
+
+.cambiar-texto {
+    margin: 0;
+    margin-top: 100px;
+    font-size: 1rem;
+}
+
+/* FOOTER */
+footer {
+    display: flex;
+    flex-direction: column;
+    align-items: end;
+    margin-right: 40px;
+}
+
+.redes {
+    /* width: 40px;
+    height: 40px; */
+    margin-right: 10px;
+    font-size: 2rem;
+    background: transparent;
+    color: #0089ff;
+    text-decoration: none;
+}
+
+.redes-btn {
+    display: flex;
+    flex-direction: row;
+}
+
+.linea {
+    height: 5px;
+    width: 70px;
+    background: #0089ff;
+    margin-right: 10px;
+    border-radius: 10px;
+}
+
+/* Diseño Responsivo */
+@media screen and (max-width:480px) {
+    .title {
+        text-align: center;
+        margin: 20px;
+    }
+
+    main {
+        width: 100%;
+        align-content: center;
+    }
+
+    .contenedor {
+        margin: 0 auto;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .area-entrada {
+        width: 90%;
+    }
+
+    .custom-textarea {
+        width: 90%;
+        position: relative;
+        margin-bottom: 1rem;
+        margin-top: 1rem;
+        text-align: center;
+    }
+
+    .custom-textarea textarea {
+        font-size: 1rem;
+        width: 90%;
+        height: 80px;
+        padding: .3rem .3rem;
+        line-height: 1;
+        border: 2px solid #0089ff;
+    }
+
+    .custom-textarea label {
+        top: .1rem;
+        left: 1rem;
+        padding: .1rem .1rem;
+    }
+
+    .custom-textarea textarea:not(:placeholder-shown)+label,
+    .custom-textarea textarea:focus+label {
+        transform: translate(.2rem, -1.5rem) scale(.85);
+        padding: .4rem .4rem;
+        font-size: .8em;
+        border: 3px solid #0089ff;
+    }
+
+    .info {
+        text-align: center;
+        margin-top: 1px;
+        margin-bottom: 1px;
+        font-size: 1rem;
+    }
+
+    .botones {
+        text-align: center;
+        margin-top: 5px;
+    }
+
+    button {
+        margin-top: 10px;
+        width: 70%;
+        padding: 16px 42px;
+        margin-right: 0;
+        border: 2px solid #0089ff;
+    }
+
+    .cambio {
+        display: none;
+    }
+
+    .area-mensaje {
+        width: 90%;
+        margin: 20px 0 0 0;
+        flex-direction: row;
+    }
+
+    .area-textarea {
+        width: 70%;
+        /* display: flex; */
+    }
+
+    .area-mensaje textarea {
+        font-size: 1rem;
+        width: 90%;
+        height: 80px;
+        padding: .1rem .1rem;
+        border: 2px solid #0089ff;
+    }
+
+    .btn-salida {
+        text-align: start;
+    }
+
+    .btn-salida button {
+        margin: 1px 0 0 0;
+        padding: 5px;
+    }
+
+    .btn-salida button i {
+        font-size: 1.2rem;
+    }
+
+    .btn-salida button span {
+        display: none;
+    }
+
+    footer {
+        margin-top: 20px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-right: 0;
+    }
+
+    .linea {
+        height: 7px;
+        width: 50%;
+        background: #0089ff;
+        margin-right: 0;
+        border-radius: 10px;
+    }
+
+    .redes-btn {
+        display: flex;
+        flex-direction: row;
+        margin-top: 10px;
+    }
+
+    .redes {
+        margin-right: 10px;
+        font-size: 2rem;
+    }
+
+
+}
